@@ -47,7 +47,9 @@ echo $contents; } ?>
 
 <h2>Description</h2>
 
-<p> The <a href="http://<?php echo $domain; ?>/projects/<?php echo $group_name; ?>/">R-Forge project <tt>ebuzh</tt></a> currently hosts a single R package: <strong>biostatUZH</strong>. </p>
+<p> <strong>NOTE:</strong> The project has been moved to <a href="https://github.com/EBPI-Biostatistics/biostatUZH">Github</a> </p>
+
+<p> The <a href="http://<?php echo $domain; ?>/projects/<?php echo $group_name; ?>/">R-Forge project <tt>ebuzh</tt></a> currently hosts a single R package: <strong>biostatUZH</strong>. </p> 
 
 <p> For information about the package contents see the
 <a href="https://<?php echo $domain; ?>/scm/viewvc.php/*checkout*/pkg/biostatUZH/DESCRIPTION?root=<?php echo $group_name; ?>&content-type=text%2Fplain">DESCRIPTION file</a>
@@ -56,20 +58,10 @@ and the
 
 <h2>Installation</h2>
 
-<p> You can easily install the current package version in <tt>R</tt>. </p>
-
-<h3>Windows &amp; Linux</h3>
+<p> You can easily install the current package version in <tt>R</tt> from Github. </p>
 
 <div style="text-align:center; font-size:x-large; font-family:monospace">
-install.packages("biostatUZH", repos = "http://R-Forge.R-project.org")
-</div>
-
-<h3>Mac OS X</h3>
-
-<p> Since R-Forge does no longer offer binaries for MacOS X,
-it is necessary to specify the additional argument <tt>type = "source"</tt>: </p>
-<div style="text-align:center; font-size:x-large; font-family:monospace">
-install.packages("biostatUZH", repos = "http://R-Forge.R-project.org", type = "source")
+remotes::install_github(repo = "EBPI-Biostatistics/biostatUZH", build_vignettes = TRUE)
 </div>
 
 </body>
